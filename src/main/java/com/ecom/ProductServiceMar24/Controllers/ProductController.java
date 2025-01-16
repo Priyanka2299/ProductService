@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,4 +60,9 @@ public class ProductController {
     public Product replaceProduct(@PathVariable("id") Long id, @RequestBody Product product) {
         return productService.replaceProduct(id, product);
     }
+    @ExceptionHandler(FileNotFoundException.class)
+    public ResponseEntity<Void> handleSomeException(){      // this code is used to handle exception at controller level and not global level exception handler and doesnot belong to Controller Advice
+        return null;
+    }
 }
+b
