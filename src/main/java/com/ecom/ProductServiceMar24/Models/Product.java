@@ -7,10 +7,10 @@ import lombok.Setter;
 @Setter             //if we use @data inplace of @getter @setter. @data serves the purpose for both
 
 public class Product {
-    private Long id;
-    private String title;
-    private String description;
-    private double price;
-    private String image;
-    private Category category;
+    private Long Id;
+    private String Title;
+    private String Description;
+    private Category Category;
+    private double Price;
+    private String Image;
 }
